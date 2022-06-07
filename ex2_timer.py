@@ -8,25 +8,22 @@ import time
 
 
 while True:
-    hrs=input('pls. enter how many hours passed: ')
-
-    if hrs == "done" :
-        break
-    mins=input('pls. enter how many minutes passed: ')
-    secs=input('pls. enter how many seconds passed: ')
-    time.sleep(0.5)
-
     try:
+        hrs,mins,secs=input('pls. enter how many hours, minutes and seconds passed in the following format: hh mm ss: ').split()
         h=int(hrs)
         m=int(mins)
         s=int(secs)
     except:
-        #if input invlaid inform user
-        print("Invalid input. Pls. enter integer number")
+        print("Invalid input. Pls. check the format. You should use spaces between integer numbers. ")
         continue
+
     print('to finish program type "done"')
     total_time_in_secs=h*3600+m*60+s
     print('The total time in secs passed: '+str(total_time_in_secs))
+    time.sleep(2)
+    ans=input('Finish this program? y/n: ')
+    if ans == "y" :
+        break
     time.sleep(0.5)
 
 

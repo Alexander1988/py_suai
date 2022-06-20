@@ -31,4 +31,4 @@ while True:
     if mm<1 or mm>12:
         print("Invalid date. Pls. check the format of input data.Month should be in a range 1..12 ")
         continue
-    print(f'You have a birthday date: MONTH {mm}, DAY {dd}')
+    print(f'You have a birthday date: MONTH.DAY {mm}.{dd}')

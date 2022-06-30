@@ -23,7 +23,7 @@ import random
 n= None
 attempt=0 #total attempts number is 10.
 py_program=random.randint(10,99)
-print(py_program)
+
 
 while attempt<=10:
     attempt+=1
@@ -33,11 +33,11 @@ while attempt<=10:
         print("Invalid input. Pls. check the format of input data. ")
         continue
     if n==py_program:
-        print("Whoa, you're right!! the number am I thinking of is " + str(n))
+        print("да")
         break
     elif n>py_program:
-        print("that's number bigger than guessed number")
+        print("больше")
     elif n<py_program:
-        print("that's number smaller than guessed number")
+        print("меньше")
     elif attempt==10:
-        print("I'm sorry, You've made a 10 tries. Number is not guessed")
+        print("не угадали")

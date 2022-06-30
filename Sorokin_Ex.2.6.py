@@ -21,10 +21,11 @@
 
 while True:
 
-    n=input("enter integer number in a range 0... 999 ")
+    n=input("Введите целое число")
     str_num=str(n)
     counter=len(n)
-    check=0
+    check=0 #variable for ans
+    divider=10 #var for division number n
 
     try:
         num=int(n)
@@ -33,11 +34,11 @@ while True:
         continue
     while num!=0:
 
-        check=check+(num%10)**counter # at 1st step 0 + 153%10**3 =27
-        num=num//10 #153//10=15
+        check=check+(num%divider)**counter # at 1st step 0 + 153%10**3 =27
+        num=num//divider #153//10=15
 
     if check==int(n):
-        print('this is narcissistic number ')
+        print('нарцисс')
     else: print('That is not narcissistic number . Pls. try again')
 
 

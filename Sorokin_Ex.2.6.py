@@ -21,7 +21,7 @@
 
 while True:
 
-    n=input("Введите целое число")
+    n=input("Введите целое число\n")
     str_num=str(n)
     counter=len(n)
     check=0 #variable for ans
@@ -39,7 +39,10 @@ while True:
 
     if check==int(n):
         print('нарцисс')
-    else: print('That is not narcissistic number . Pls. try again')
+        break
+    else:
+        print('не нарцисс')
+        break
 
 
 

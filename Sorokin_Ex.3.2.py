@@ -18,27 +18,24 @@
 # [Программа:] 7
 # ```
 
-while True:
-    try:
-        n=int(input('please, enter integer number in a range of 0 to 1000 '))
-    except:
-        print("Invalid input. Pls. check the format of input data. ")
-        continue
-    rem=None
-    divider=7
-    res=set() #creating of empty set()
 
-    for number in range(n,0,-1):
-        rem=number%divider
-        number-=rem #since, this actio creates same number we need set()
-        res.add(number)
 
-    res.pop()#removes '0'
-    b=list(res)#sort function is not supported by sets
-    b.sort(reverse=True)
-    # print(res)
-    for i in b:
-        print(i)
+n=int(input('Введите число: \n'))
+rem=None
+divider=7
+res=set() #creating of empty set()
+
+for number in range(n,0,-1):
+    rem=number%divider
+    number-=rem #since, this actio creates same number we need set()
+    res.add(number)
+
+res.pop()#removes '0'
+b=list(res)#sort function is not supported by sets
+b.sort(reverse=True)
+# print(res)
+for i in b:
+    print(i)
 
 
     #     if number%divider==0:

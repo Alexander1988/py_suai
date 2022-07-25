@@ -22,18 +22,16 @@
 
 from math import sqrt
 
-while True:
-    try:
-        n=int(input('please, enter integer number: '))
-    except:
-        print("Invalid input. Pls. check the format of input data. ")
-        continue
-    if n>=0:
-        root=sqrt(n)
-        print(f"{root:.3f}")
-    else:
-        root=sqrt(abs(n))
-        print(f"{root:.3f}i")
+
+
+n=int(input('Введите целое число \n'))
+
+if n>=0:
+    root = sqrt(n)
+    print(f"{root:.3f}")
+else:
+    root = sqrt(abs(n))
+    print(f"{root:.3f}i")
 
 
 

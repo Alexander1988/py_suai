@@ -14,19 +14,14 @@
 # [Программа:] 35
 # ```
 
-while True:
-    try:
-        n=int(input('please, enter integer number in a range of 0 to 1000 '))
-    except:
-        print("Invalid input. Pls. check the format of input data. ")
-        continue
-    numbers=list()
-    divider=7
-    for number in range(n+1):
-        if number%divider==0 and number!=0:
-            numbers.append(number)
-    if numbers !=[]:
-        print(f'  these numbers are multiples of 7: {numbers}')
+
+n=int(input('Введите число: \n'))
+print("Invalid input. Pls. check the format of input data. ")
+divider=7
+for number in range(n+1):
+    if number%divider==0 and number!=0 and number <= 1000:
+        print(number)
+
 
 
 

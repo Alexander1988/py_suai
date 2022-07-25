@@ -21,14 +21,22 @@
 # [[Программа:]] 31.10
 
 while True:
-    try:
-        month,day=input('please, enter your birthday in the following format:MM DD ').split()
-        mm=int(month)
-        dd=int(day)
-    except:
-        print("Invalid input. Pls. check the format of input data. ")
-        continue
-    if mm<1 or mm>12:
-        print("Invalid date. Pls. check the format of input data.Month should be in a range 1..12 ")
-        continue
-    print(f'You have a birthday date: MONTH.DAY {mm}.{dd}')
+
+    month=input('Введите месяц Вашего рождения \n')
+    day=input('Введите число месяца, когда Вы родились \n')
+    mm=int(month)
+    dd=int(day)
+    ThirtyDayMonths={4,6,9,11}
+    FebDaysNum=28
+
+    if mm not in range(1,12):
+        print("Неверная дата")
+    elif mm in ThirtyDayMonths and dd>30:
+        print("Неверная дата")
+    elif mm ==2 and dd >FebDaysNum:
+        print("Неверная дата")
+    else:
+        print(f'{mm}.{dd}')
+        break
+
+

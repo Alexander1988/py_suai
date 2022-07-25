@@ -9,14 +9,20 @@
 # [Программа:] -и--ио-
 # ```
 try:
-    word=str(input('Введите слово:'))
+    word=str(input('Введите слово: \n'))
 except:
-    print("Invalid input. Word should be string ")
-
+    print("Invalid input. Word should be string")
+upper_vowels=list()
 vowels=["а", "е", "ё", "и", "о", "у", "ы", "э", "ю", "я", 'a', 'e', 'i', 'o', 'u']
-for letter in word.lower():
+for vowel in vowels:
+    upper_vowels.append(vowel.upper())
+
+for letter in word:
     if letter not in vowels:
-        word=word.replace(letter, "-")
+        if letter not in upper_vowels:
+        #and not in upper_vowels
+            word = word.replace(letter, "-")
+
 print(word)
 
 

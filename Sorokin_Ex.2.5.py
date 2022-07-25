@@ -18,17 +18,22 @@
 # [[Программа:]] 41
 
 while True:
-    try:
-        n=int(input('please, enter integer number in a range of 0 to 99999 '))
-    except:
-        print("Invalid input. Pls. check the format of input data. ")
-        continue
+
+    n=int(input('Введите целое число \n'))
+
     hlp=2
-    if n==1: print(n)
+    if n==1:
+        print(n)
+        break
     else:
         while n%hlp!=0:
             hlp+=1
+
         if hlp== n:
-            print(f' prime number is {n}')
+            print(n)
+            break
+
         elif n>1:
-            print(f'the largest integer factor {int(n / hlp)}')
+            print(int(n / hlp))
+            break
+

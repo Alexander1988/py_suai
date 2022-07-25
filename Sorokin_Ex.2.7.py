@@ -20,24 +20,24 @@
 
 
 import random
-n= None
-attempt=0 #total attempts number is 10.
-py_program=random.randint(10,99)
 
-
-while attempt<=10:
-    attempt+=1
-    try:
-        n=int(input('Hello! Guess what number am I thinking of? please, enter  an integer positive number: '))
-    except:
-        print("Invalid input. Pls. check the format of input data. ")
-        continue
-    if n==py_program:
+attempt=1 #total attempts number is 10.
+py_program=random.randint(100,999)
+#py_program=333
+n = int(input('Я загадала целое число, попробуйте угадать\n'))
+while attempt <= 10:
+    if n == py_program:
         print("да")
         break
-    elif n>py_program:
-        print("больше")
-    elif n<py_program:
-        print("меньше")
-    elif attempt==10:
+    if attempt == 10:
         print("не угадали")
+        break
+
+    elif n > py_program:
+        print("меньше")
+        n = int(input())
+    elif n < py_program:
+        print("больше")
+        n = int(input())
+
+    attempt += 1

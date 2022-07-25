@@ -14,14 +14,14 @@
 # 6
 # 8
 # 10
-while True:
-    try:
-        n=int(input('please, enter  an integer positive number: '))
-    except:
-        print("Invalid input. Pls. check the format of input data. ")
-        continue
-    while n>0:
-        n=n-1 #since the output positive numbers should be smaller than n, we should decrease n.
-        if n%2==0 and n>0:
-            print(n)
-            n=n-1
+n=int(input('Введите целое положительное число \n'))
+even=2
+while (n//even) > 0 and n != even:
+    # n=n-1 #since the output positive numbers should be smaller than n, we should decrease n.
+
+    print(even)
+    even+=2
+
+    # if n%2==0 and n>0:
+    #     print(f'{n}')
+    #     n=n-1

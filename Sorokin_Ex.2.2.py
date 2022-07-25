@@ -16,19 +16,19 @@
 import random
 n= None
 py_program=random.randint(10,99)
-print(py_program)
-
-while py_program!=n:
+#print(py_program)
+print('Я загадала целое число, попробуйте угадать')
+while py_program != n:
     try:
-        n=int(input('Hello! Guess what number am I thinking of? please, enter  an integer positive number: '))
+        n=int(input())
     except:
-        print("Invalid input. Pls. check the format of input data. ")
+        print("Invalid input. Pls. check the format of input data. \n")
         continue
     if n==py_program:
-        print("Whoa, you're right!! the number am I thinking of is " + str(n))
+        print("да")
         break
     else:
-        print("nope. I'm sorry, that's a  wrong number. Try again")
+        print("нет")
 
 
 

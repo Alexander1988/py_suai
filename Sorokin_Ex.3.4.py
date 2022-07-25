@@ -18,7 +18,7 @@
 word=None
 lst=list()
 while word!='':
-    word=str(input('Вводите слова по одному, для окончания введите пустую строку: '))
+    word=str(input('Вводите слова по одному, для окончания введите пустую строку: \n'))
     if word!='': lst.append(word)
 print(lst)
 

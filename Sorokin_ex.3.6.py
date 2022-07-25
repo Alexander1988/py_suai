@@ -18,7 +18,7 @@ largest = None
 
 #start the finite loop
 while True:
-    num = input("Вводите целые числа по одному, для окончания введите пустую строку: ")
+    num = input("Вводите целые числа по одному, для окончания введите пустую строку: \n")
     if num == "" :
         break
     #check the weakest place in code
@@ -31,10 +31,12 @@ while True:
         continue
 
         #find the largest number
-    if largest is None:
-        largest = n
-    elif n>largest:
-        largest = n
+    if n%2==0:
+        if largest is None:
+            largest = n
+        elif n>largest:
+            largest = n
+
 #printout the largest and the smallest
 print(largest)
 

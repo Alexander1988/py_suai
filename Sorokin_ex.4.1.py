@@ -16,14 +16,16 @@
 
 line = input('Введите предложение\n').rstrip(".").split()
 new_line = []
-if len(line) != 0:
+if line != (''):
     for word in line:
         if word == line[0]:
             word=''.join((word,'.'))
-    word = word.lower()
-    if word == line[-1]:
-        word = word.capitalize()
-    new_line.append(word)
+        word = word.lower()
+        if len(line) == 1:
+            word = word.capitalize()
+        elif word == line[-1]:
+            word = word.capitalize()
+        new_line.append(word)
     res =' '.join(new_line[::-1])
     print(res)
 else: print('')
